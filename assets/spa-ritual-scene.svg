@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">Ritual Emma Spa</title>
+  <desc id="desc">Composición minimalista de toallas, piedras, flor de loto y cerámica en tonos beige y rosa suave.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fdfaf7"/>
+      <stop offset=".58" stop-color="#f7efe6"/>
+      <stop offset="1" stop-color="#f6d6dc"/>
+    </linearGradient>
+    <linearGradient id="linen" x1="0" x2="1">
+      <stop offset="0" stop-color="#fffdfa"/>
+      <stop offset="1" stop-color="#eadbc8"/>
+    </linearGradient>
+    <linearGradient id="pink" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f1a9b8"/>
+      <stop offset="1" stop-color="#d9798f"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#2c1a1d" flood-opacity=".12"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="820" fill="url(#bg)"/>
+  <path d="M0 642c156-55 318-70 486-44 206 32 373 19 501-39 82-38 153-43 213-17v278H0Z" fill="#fdfaf7" opacity=".78"/>
+  <g filter="url(#soft)">
+    <rect x="122" y="432" width="492" height="116" rx="14" fill="url(#linen)"/>
+    <rect x="156" y="383" width="492" height="116" rx="14" fill="#fffaf4"/>
+    <path d="M179 413h412" stroke="#e8d5ba" stroke-width="2" opacity=".7"/>
+    <path d="M176 468h410" stroke="#e8d5ba" stroke-width="2" opacity=".45"/>
+  </g>
+  <g transform="translate(706 210)" filter="url(#soft)">
+    <ellipse cx="170" cy="218" rx="172" ry="49" fill="#e8d5ba" opacity=".58"/>
+    <ellipse cx="171" cy="196" rx="142" ry="96" fill="#fdfaf7"/>
+    <ellipse cx="171" cy="194" rx="114" ry="72" fill="#f7efe6"/>
+    <path d="M62 184c68 38 150 39 218 0" fill="none" stroke="#e8d5ba" stroke-width="5" stroke-linecap="round" opacity=".65"/>
+  </g>
+  <g transform="translate(746 520)" fill="#9b9288" opacity=".9" filter="url(#soft)">
+    <ellipse cx="38" cy="38" rx="72" ry="38"/>
+    <ellipse cx="143" cy="25" rx="76" ry="42" fill="#b5aa9d"/>
+    <ellipse cx="235" cy="48" rx="92" ry="49" fill="#8e857b"/>
+  </g>
+  <g transform="translate(506 220)">
+    <path d="M94 0c36 42 45 95 25 158C80 121 68 74 94 0Z" fill="url(#pink)"/>
+    <path d="M37 59c47 6 82 39 104 98-67-10-103-42-104-98Z" fill="#e48da1" opacity=".9"/>
+    <path d="M153 59c-47 6-82 39-104 98 67-10 103-42 104-98Z" fill="#e48da1" opacity=".9"/>
+    <path d="M0 120c72-16 129 3 171 55C89 188 31 171 0 120Z" fill="#d9798f" opacity=".82"/>
+    <path d="M188 120c-72-16-129 3-171 55 82 13 140-4 171-55Z" fill="#d9798f" opacity=".82"/>
+  </g>
+  <g fill="none" stroke="#e8d5ba" stroke-width="2" opacity=".55">
+    <path d="M90 194c112-54 227-65 344-34"/>
+    <path d="M724 121c96-34 196-36 300-6"/>
+    <path d="M260 687c173 24 341 18 505-18"/>
+  </g>
+</svg>

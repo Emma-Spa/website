@@ -1,6 +1,1166 @@
-test
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Emma Spa: un espacio de bienestar en calma para relajarte, renovar tu energía y volver a ti.">
+  <title>Emma Spa | Relájate, renueva, renace</title>
+  <link rel="icon" href="assets/emma-logo-mark.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --rosa: #e48da1;
+      --rosa-claro: #f6d6dc;
+      --grafito: #4a4a4a;
+      --beige: #f7efe6;
+      --arena: #e8d5ba;
+      --oscuro: #2c1a1d;
+      --blanco: #fdfaf7;
+      --linea: rgba(74, 74, 74, 0.14);
+      --sombra: 0 20px 60px rgba(44, 26, 29, 0.08);
+      --page-pad: clamp(20px, 5vw, 64px);
+    }
 
+    * {
+      box-sizing: border-box;
+    }
 
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
 
+    html {
+      scroll-behavior: smooth;
+      width: 100%;
+    }
 
-123
+    body {
+      margin: 0;
+      background: var(--beige);
+      color: var(--grafito);
+      font-family: "Lato", Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+      padding-bottom: 92px;
+      width: 100%;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .site-header {
+      align-items: center;
+      background: rgba(253, 250, 247, 0.9);
+      border-bottom: 1px solid var(--linea);
+      display: flex;
+      gap: 28px;
+      justify-content: space-between;
+      left: 0;
+      min-height: 72px;
+      padding: 16px var(--page-pad);
+      position: sticky;
+      right: 0;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(18px);
+    }
+
+    .brand-mark {
+      align-items: center;
+      display: inline-flex;
+      min-width: max-content;
+    }
+
+    .brand-logo {
+      height: auto;
+      width: clamp(150px, 16vw, 190px);
+    }
+
+    .nav-links {
+      align-items: center;
+      display: flex;
+      gap: clamp(14px, 3vw, 34px);
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      min-width: 0;
+    }
+
+    .nav-links a {
+      color: var(--grafito);
+      font-family: "Montserrat", Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      text-transform: uppercase;
+      transition: color 180ms ease;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--rosa);
+      outline: none;
+    }
+
+    main {
+      overflow: hidden;
+    }
+
+    section {
+      scroll-margin-top: 92px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+      min-height: calc(100vh - 72px);
+    }
+
+    .hero-copy {
+      align-content: center;
+      display: grid;
+      gap: 28px;
+      min-width: 0;
+      padding: clamp(72px, 10vw, 132px) clamp(24px, 7vw, 92px);
+    }
+
+    .eyebrow {
+      color: var(--rosa);
+      font-family: "Montserrat", Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: var(--oscuro);
+      font-family: "Montserrat", Arial, sans-serif;
+      font-weight: 300;
+      letter-spacing: 0;
+      line-height: 1.13;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: clamp(44px, 8vw, 96px);
+      max-width: 780px;
+    }
+
+    h2 {
+      font-size: clamp(30px, 4.7vw, 58px);
+      max-width: 780px;
+    }
+
+    h3 {
+      font-size: 22px;
+      font-weight: 400;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .hero-copy p {
+      color: var(--grafito);
+      font-size: clamp(18px, 2vw, 22px);
+      max-width: 640px;
+    }
+
+    .hero-actions,
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .button {
+      align-items: center;
+      border: 1px solid transparent;
+      display: inline-flex;
+      gap: 10px;
+      justify-content: center;
+      min-height: 48px;
+      padding: 13px 20px;
+      font-family: "Montserrat", Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      max-width: 100%;
+      text-transform: uppercase;
+      transition: background 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
+      white-space: normal;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    .button-primary {
+      background: var(--rosa);
+      color: var(--blanco);
+    }
+
+    .button-primary:hover,
+    .button-primary:focus-visible {
+      background: #d97c92;
+    }
+
+    .button-secondary {
+      border-color: rgba(228, 141, 161, 0.55);
+      color: var(--oscuro);
+    }
+
+    .button-secondary:hover,
+    .button-secondary:focus-visible {
+      background: var(--rosa-claro);
+    }
+
+    .icon {
+      height: 18px;
+      width: 18px;
+    }
+
+    .hero-visual {
+      align-items: center;
+      background:
+        linear-gradient(180deg, rgba(253, 250, 247, 0.2), rgba(247, 239, 230, 0.94)),
+        var(--blanco);
+      display: grid;
+      min-height: 620px;
+      min-width: 0;
+      padding: clamp(28px, 6vw, 72px);
+      position: relative;
+    }
+
+    .image-panel {
+      background: rgba(253, 250, 247, 0.78);
+      border: 1px solid rgba(232, 213, 186, 0.86);
+      box-shadow: var(--sombra);
+      aspect-ratio: 1 / 1;
+      min-height: clamp(360px, 45vw, 570px);
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+    }
+
+    .image-panel img {
+      height: 100%;
+      inset: 0;
+      object-fit: cover;
+      position: absolute;
+      width: 100%;
+      will-change: transform;
+    }
+
+    .image-panel .hero-photo {
+      object-position: 48% center;
+    }
+
+    .intro,
+    .servicios,
+    .sensory,
+    .ubicacion,
+    .contacto {
+      padding: clamp(72px, 10vw, 124px) clamp(24px, 6vw, 80px);
+    }
+
+    .section-inner {
+      margin: 0 auto;
+      max-width: 1120px;
+      min-width: 0;
+      width: 100%;
+    }
+
+    .intro-grid {
+      display: grid;
+      gap: clamp(36px, 6vw, 80px);
+      grid-template-columns: minmax(0, 0.92fr) minmax(280px, 1.08fr);
+      align-items: start;
+      min-width: 0;
+    }
+
+    .intro-text {
+      display: grid;
+      gap: 24px;
+    }
+
+    .space-preview {
+      margin: clamp(48px, 7vw, 84px) auto 0;
+      max-width: 1120px;
+    }
+
+    .space-preview img {
+      aspect-ratio: 3 / 2;
+      display: block;
+      height: auto;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .space-preview figcaption {
+      color: var(--grafito);
+      font-size: 12px;
+      margin-top: 12px;
+    }
+
+    .experience-note {
+      border-left: 2px solid var(--rosa);
+      color: var(--oscuro);
+      font-family: "Montserrat", Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 10px 0 10px 18px;
+      text-transform: uppercase;
+    }
+
+    .intro-text p,
+    .section-lead {
+      font-size: 18px;
+      max-width: 720px;
+    }
+
+    .values {
+      border-top: 1px solid var(--linea);
+      display: grid;
+      gap: 0;
+    }
+
+    .value {
+      border-bottom: 1px solid var(--linea);
+      display: grid;
+      gap: 8px;
+      padding: 24px 0;
+    }
+
+    .value strong {
+      color: var(--oscuro);
+      font-family: "Montserrat", Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    .servicios {
+      background: var(--blanco);
+    }
+
+    .sensory {
+      background: var(--beige);
+      position: relative;
+    }
+
+    .sensory-grid {
+      align-items: center;
+      display: grid;
+      gap: clamp(36px, 6vw, 80px);
+      grid-template-columns: minmax(300px, 1.05fr) minmax(280px, 0.95fr);
+      min-width: 0;
+    }
+
+    .sensory-media {
+      background: var(--blanco);
+      border: 1px solid var(--arena);
+      box-shadow: var(--sombra);
+      aspect-ratio: 1.15 / 1;
+      min-height: 520px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .sensory-media img {
+      height: 112%;
+      inset: -6% 0 0;
+      object-fit: cover;
+      position: absolute;
+      width: 100%;
+      will-change: transform;
+    }
+
+    .sensory-copy {
+      display: grid;
+      gap: 24px;
+    }
+
+    .sensory-list {
+      border-top: 1px solid var(--linea);
+      display: grid;
+    }
+
+    .sensory-list p {
+      border-bottom: 1px solid var(--linea);
+      padding: 18px 0;
+    }
+
+    .section-heading {
+      display: grid;
+      gap: 18px;
+      margin-bottom: clamp(34px, 5vw, 64px);
+    }
+
+    .service-grid {
+      display: grid;
+      gap: 1px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      background: var(--arena);
+      border: 1px solid var(--arena);
+      min-width: 0;
+    }
+
+    .service-card {
+      background: var(--blanco);
+      display: grid;
+      grid-template-rows: auto 1fr;
+      min-width: 0;
+    }
+
+    .service-image {
+      aspect-ratio: 4 / 5;
+      display: block;
+      height: auto;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .service-copy {
+      align-content: start;
+      display: grid;
+      gap: 14px;
+      padding: clamp(24px, 3vw, 34px);
+    }
+
+    .service-card p {
+      color: var(--grafito);
+    }
+
+    .quiet-band {
+      background: var(--oscuro);
+      color: var(--beige);
+      overflow: hidden;
+      padding: clamp(58px, 8vw, 92px) clamp(24px, 6vw, 80px);
+      position: relative;
+    }
+
+    .band-image {
+      height: 130%;
+      inset: -15% 0 auto;
+      object-fit: cover;
+      opacity: .42;
+      position: absolute;
+      width: 100%;
+      will-change: transform;
+    }
+
+    .quiet-band .section-inner {
+      display: grid;
+      gap: 22px;
+      max-width: 860px;
+      position: relative;
+      text-align: center;
+      z-index: 1;
+    }
+
+    .quiet-band h2 {
+      color: var(--beige);
+    }
+
+    .quiet-band p {
+      color: rgba(247, 239, 230, 0.8);
+      font-size: 18px;
+    }
+
+    .ubicacion-grid {
+      display: grid;
+      gap: clamp(28px, 5vw, 60px);
+      grid-template-columns: minmax(280px, 0.82fr) minmax(320px, 1.18fr);
+      align-items: stretch;
+      min-width: 0;
+    }
+
+    .address-block {
+      border-top: 1px solid var(--linea);
+      display: grid;
+      gap: 18px;
+      padding-top: 26px;
+    }
+
+    .address-block address {
+      color: var(--oscuro);
+      font-style: normal;
+      font-size: 19px;
+      line-height: 1.55;
+    }
+
+    .map-frame {
+      background: var(--blanco);
+      border: 1px solid var(--arena);
+      aspect-ratio: 16 / 10;
+      min-height: 460px;
+      overflow: hidden;
+    }
+
+    .map-frame iframe {
+      border: 0;
+      display: block;
+      height: 100%;
+      min-height: 460px;
+      width: 100%;
+    }
+
+    .contacto {
+      background:
+        linear-gradient(90deg, rgba(246, 214, 220, 0.54), rgba(253, 250, 247, 0.95)),
+        var(--blanco);
+    }
+
+    .contact-panel {
+      display: grid;
+      gap: 28px;
+      max-width: 760px;
+    }
+
+    .contact-panel p {
+      font-size: 18px;
+    }
+
+    .site-footer {
+      align-items: center;
+      border-top: 1px solid var(--linea);
+      color: rgba(74, 74, 74, 0.78);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: space-between;
+      padding: 24px var(--page-pad);
+    }
+
+    .site-footer small {
+      font-size: 13px;
+    }
+
+    .appointment-bar {
+      align-items: center;
+      background: rgba(253, 250, 247, 0.92);
+      border: 1px solid rgba(232, 213, 186, 0.86);
+      bottom: 18px;
+      box-shadow: 0 18px 50px rgba(44, 26, 29, 0.12);
+      display: flex;
+      gap: 14px;
+      justify-content: space-between;
+      max-width: calc(100vw - 36px);
+      padding: 10px 10px 10px 18px;
+      position: fixed;
+      right: 18px;
+      text-decoration: none;
+      width: min(430px, calc(100vw - 36px));
+      z-index: 20;
+      backdrop-filter: blur(18px);
+    }
+
+    .appointment-copy {
+      display: grid;
+      gap: 2px;
+      min-width: 0;
+    }
+
+    .appointment-copy strong {
+      color: var(--oscuro);
+      font-family: "Montserrat", Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    .appointment-copy span {
+      color: rgba(74, 74, 74, 0.78);
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    .appointment-action {
+      align-items: center;
+      background: var(--rosa);
+      color: var(--blanco);
+      display: inline-flex;
+      flex: 0 0 auto;
+      gap: 8px;
+      justify-content: center;
+      min-height: 44px;
+      padding: 11px 16px;
+      font-family: "Montserrat", Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      transition: background 180ms ease, transform 180ms ease;
+    }
+
+    .appointment-label-short {
+      display: none;
+    }
+
+    .appointment-action:hover,
+    .appointment-action:focus-visible {
+      background: #d97c92;
+      outline: none;
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 880px) {
+      :root {
+        --page-pad: clamp(20px, 6vw, 44px);
+      }
+
+      .site-header {
+        align-items: center;
+        flex-direction: column;
+        gap: 14px;
+        position: relative;
+      }
+
+      .nav-links {
+        gap: 12px 22px;
+        justify-content: center;
+        overflow-x: visible;
+        padding-bottom: 4px;
+        width: 100%;
+      }
+
+      .hero,
+      .intro-grid,
+      .sensory-grid,
+      .ubicacion-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-copy {
+        padding: clamp(56px, 10vw, 92px) var(--page-pad);
+      }
+
+      .hero-visual {
+        min-height: auto;
+        padding: 0 var(--page-pad) clamp(56px, 10vw, 92px);
+      }
+
+      .image-panel {
+        aspect-ratio: 16 / 10;
+        min-height: 0;
+      }
+
+      .sensory-media {
+        min-height: 0;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card {
+        grid-template-columns: minmax(220px, .82fr) minmax(0, 1fr);
+        grid-template-rows: none;
+      }
+
+      .service-image {
+        aspect-ratio: 4 / 3;
+        height: 100%;
+      }
+    }
+
+    @media (max-width: 560px) {
+      :root {
+        --page-pad: 20px;
+      }
+
+      body {
+        font-size: 15px;
+        padding-bottom: 102px;
+      }
+
+      .site-header {
+        align-items: flex-start;
+        padding: 16px var(--page-pad);
+      }
+
+      .brand-logo {
+        width: 150px;
+      }
+
+      .section-inner {
+        margin-left: 0;
+        margin-right: 0;
+        max-width: none;
+        width: 100%;
+      }
+
+      .nav-links {
+        display: grid;
+        gap: 9px 14px;
+        grid-template-columns: 1fr 1fr;
+        justify-content: stretch;
+        width: 100%;
+      }
+
+      .nav-links a {
+        font-size: 10px;
+      }
+
+      .hero-copy {
+        gap: 24px;
+        min-width: 0;
+      }
+
+      .hero-copy > *,
+      .intro > .section-inner,
+      .intro > .space-preview,
+      .sensory > .section-inner,
+      .servicios > .section-inner,
+      .ubicacion > .section-inner,
+      .contacto > .section-inner {
+        max-width: calc(100vw - (var(--page-pad) * 2));
+      }
+
+      .intro-text,
+      .section-heading,
+      .sensory-copy,
+      .values,
+      .sensory-list,
+      .address-block,
+      .contact-panel {
+        max-width: calc(100vw - (var(--page-pad) * 2));
+        width: min(100%, 280px);
+      }
+
+      .hero-copy,
+      .intro,
+      .servicios,
+      .sensory,
+      .ubicacion,
+      .contacto {
+        padding-left: var(--page-pad);
+        padding-right: var(--page-pad);
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .hero-copy > .eyebrow,
+      h1 {
+        max-width: min(100%, 350px);
+      }
+
+      h1 {
+        font-size: clamp(29px, 8.6vw, 34px);
+        line-height: 1.18;
+        max-width: min(11ch, calc(100vw - (var(--page-pad) * 2)));
+        width: min(100%, 280px);
+      }
+
+      h2 {
+        font-size: clamp(27px, 7.6vw, 30px);
+        line-height: 1.2;
+        max-width: min(12ch, calc(100vw - (var(--page-pad) * 2)));
+        width: min(100%, 300px);
+      }
+
+      .hero-copy p,
+      .intro-text p,
+      .section-lead,
+      .quiet-band p,
+      .contact-panel p {
+        font-size: 16px;
+      }
+
+      .hero-copy p,
+      .hero-actions {
+        max-width: calc(100vw - (var(--page-pad) * 2));
+        width: min(100%, 280px);
+      }
+
+      .hero-actions,
+      .contact-actions {
+        width: 100%;
+      }
+
+      .hero-actions {
+        width: min(100%, 280px);
+      }
+
+      .image-panel {
+        justify-self: start;
+        width: calc(100vw - (var(--page-pad) * 2));
+      }
+
+      .image-panel img,
+      .sensory-media img,
+      .band-image {
+        transform: none !important;
+      }
+
+      .sensory-media {
+        aspect-ratio: 10 / 9;
+      }
+
+      .space-preview {
+        width: calc(100vw - (var(--page-pad) * 2));
+      }
+
+      .space-preview img {
+        aspect-ratio: 4 / 3;
+      }
+
+      .service-card {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+      }
+
+      .service-image {
+        aspect-ratio: 4 / 3;
+        height: auto;
+      }
+
+      .map-frame,
+      .map-frame iframe {
+        min-height: 360px;
+      }
+
+      .appointment-bar {
+        bottom: 12px;
+        justify-content: center;
+        left: var(--page-pad);
+        max-width: calc(100vw - (var(--page-pad) * 2));
+        padding: 12px 16px;
+        right: auto;
+        width: 132px;
+      }
+
+      .appointment-action {
+        display: none;
+      }
+
+      .appointment-copy span {
+        display: none;
+      }
+
+      .appointment-action {
+        min-height: 42px;
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+
+      .appointment-label-full {
+        display: none;
+      }
+
+      .appointment-label-short {
+        display: inline;
+      }
+    }
+
+    @media (max-width: 380px) {
+      :root {
+        --page-pad: 16px;
+      }
+
+      .eyebrow {
+        font-size: 11px;
+      }
+
+      .button {
+        font-size: 12px;
+        min-height: 46px;
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+
+      .appointment-bar {
+        bottom: 10px;
+        left: var(--page-pad);
+      }
+
+      .appointment-copy strong,
+      .appointment-action {
+        font-size: 11px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .parallax-layer {
+        transform: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" aria-label="Navegación principal">
+    <a class="brand-mark" href="#inicio" aria-label="Emma Spa">
+      <img class="brand-logo" src="assets/emma-logo-horizontal.png" alt="Emma Spa">
+    </a>
+    <nav class="nav-links" aria-label="Secciones">
+      <a href="#experiencia">Experiencia</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#ubicacion">Ubicación</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <span class="eyebrow">Relájate · Renueva · Renace</span>
+        <h1 id="hero-title">Tu momento de calma empieza aquí.</h1>
+        <p>Emma Spa es un espacio para bajar el ritmo, cuidar tu cuerpo y volver a sentirte presente, con servicios pensados para acompañarte sin prisa.</p>
+        <div class="hero-actions" aria-label="Acciones principales">
+          <a class="button button-primary" href="#contacto">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/>
+            </svg>
+            Agenda tu momento
+          </a>
+          <a class="button button-secondary" href="#ubicacion">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 0 1 16 0Z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            Ver ubicación
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="image-panel">
+          <img class="hero-photo parallax-layer" data-parallax-speed="-0.08" src="assets/hero-tratamiento-facial.webp" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="intro" id="experiencia" aria-labelledby="experiencia-title">
+      <div class="section-inner intro-grid">
+        <div class="section-heading">
+          <span class="eyebrow">Bienestar consciente</span>
+          <h2 id="experiencia-title">Un respiro suave dentro de tu día.</h2>
+        </div>
+        <div class="intro-text">
+          <p>En Emma Spa, cada visita se vive como una pausa íntima, cálida y cuidadosamente guiada para soltar tensión, renovar energía y regresar a ti con más ligereza.</p>
+          <p class="experience-note">30 años de experiencia</p>
+          <div class="values" aria-label="Valores de la experiencia">
+            <div class="value">
+              <strong>Calma</strong>
+              <p>Ambiente sereno, atención cercana y una experiencia sin ruido innecesario.</p>
+            </div>
+            <div class="value">
+              <strong>Cuidado</strong>
+              <p>Tratamientos pensados desde el bienestar integral: cuerpo, mente y descanso.</p>
+            </div>
+            <div class="value">
+              <strong>Armonía</strong>
+              <p>Texturas, aromas y detalles simples que acompañan la sensación de equilibrio.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <figure class="space-preview">
+        <img src="assets/ambiente-interior-conceptual.webp" alt="Referencia visual de una recepción serena con madera clara y tonos cálidos" loading="lazy">
+        <figcaption>Referencia visual de la atmósfera que inspira Emma Spa.</figcaption>
+      </figure>
+    </section>
+
+    <section class="sensory" aria-labelledby="sensory-title">
+      <div class="section-inner sensory-grid">
+        <div class="sensory-media" aria-hidden="true">
+          <img class="parallax-layer" data-parallax-speed="0.12" src="assets/detalle-sensorial-spa.webp" alt="">
+        </div>
+        <div class="sensory-copy">
+          <span class="eyebrow">Experiencia sensorial</span>
+          <h2 id="sensory-title">Texturas suaves, silencio y una intención clara.</h2>
+          <p class="section-lead">El bienestar también vive en los detalles: una tela limpia, una pausa entre movimientos, una atmósfera que permite descansar de verdad.</p>
+          <div class="sensory-list" aria-label="Detalles del ambiente Emma Spa">
+            <p>Aromas discretos que acompañan sin invadir.</p>
+            <p>Materiales cálidos, naturales y fáciles de sentir.</p>
+            <p>Un ritmo tranquilo para volver al cuerpo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="servicios" id="servicios" aria-labelledby="servicios-title">
+      <div class="section-inner">
+        <div class="section-heading">
+          <span class="eyebrow">Servicios Emma</span>
+          <h2 id="servicios-title">Tratamientos para lo que tu cuerpo necesita hoy.</h2>
+          <p class="section-lead">Cada servicio se adapta a tu momento. La intención es sencilla: que salgas más ligera, más presente y con una sensación real de descanso.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card">
+            <img class="service-image" src="assets/servicio-relaja.webp" alt="Masaje relajante en espalda y hombros" loading="lazy">
+            <div class="service-copy">
+              <h3>Servicio Relaja</h3>
+              <p>Para soltar el peso del día y encontrar una respiración más tranquila.</p>
+            </div>
+          </article>
+          <article class="service-card">
+            <img class="service-image" src="assets/servicio-renueva.webp" alt="Aplicación de tratamiento facial con brocha" loading="lazy">
+            <div class="service-copy">
+              <h3>Servicio Renueva</h3>
+              <p>Para revitalizar la piel, despertar energía y sentir el cuerpo más liviano.</p>
+            </div>
+          </article>
+          <article class="service-card">
+            <img class="service-image" src="assets/servicio-renace.webp" alt="Momento de descanso después de un tratamiento" loading="lazy">
+            <div class="service-copy">
+              <h3>Servicio Renace</h3>
+              <p>Para cerrar ciclos pequeños, recuperar equilibrio y salir con una sensación nueva.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="quiet-band" aria-labelledby="quiet-title">
+      <img class="band-image parallax-layer" data-parallax-speed="-0.16" src="assets/ambiente-calma-parallax.webp" alt="" aria-hidden="true">
+      <div class="section-inner">
+        <span class="eyebrow">Este es tu espacio</span>
+        <h2 id="quiet-title">Bienestar sin urgencia, atención sin exceso.</h2>
+        <p>Una experiencia minimalista, cálida y cuidada para que tu visita se sienta natural desde el primer momento.</p>
+      </div>
+    </section>
+
+    <section class="ubicacion" id="ubicacion" aria-labelledby="ubicacion-title">
+      <div class="section-inner ubicacion-grid">
+        <div class="section-heading">
+          <span class="eyebrow">Ubicación</span>
+          <h2 id="ubicacion-title">Encuéntranos en Guadalupe, Nuevo León.</h2>
+          <div class="address-block">
+            <address>Santa Rosa de Lima 1809,<br>Col. Residencial Santa María</address>
+            <a class="button button-secondary" href="https://www.google.com/maps/search/?api=1&query=Santa%20Rosa%20de%20Lima%201809%2C%20Col.%20Residencial%20Santa%20Mar%C3%ADa" target="_blank" rel="noopener">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14 3h7v7"/>
+                <path d="M10 14 21 3"/>
+                <path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/>
+              </svg>
+              Abrir mapa
+            </a>
+          </div>
+        </div>
+        <div class="map-frame">
+          <iframe
+            title="Mapa de Emma Spa"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Santa%20Rosa%20de%20Lima%201809%2C%20Col.%20Residencial%20Santa%20Mar%C3%ADa&output=embed">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacto" id="contacto" aria-labelledby="contacto-title">
+      <div class="section-inner contact-panel">
+        <span class="eyebrow">Contacto</span>
+        <h2 id="contacto-title">Agenda tu momento por el canal que prefieras.</h2>
+        <p>Estamos para escucharte y ayudarte a elegir el servicio que mejor acompañe tu día.</p>
+        <div class="contact-actions" aria-label="Canales de contacto">
+          <a class="button button-primary" href="#contacto" aria-label="Contactar por WhatsApp">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20.5 11.8a8.4 8.4 0 0 1-12.3 7.4L3 20.5l1.4-5a8.4 8.4 0 1 1 16.1-3.7Z"/>
+              <path d="M8.8 8.6c.2 3.4 2 5.5 5.4 6.4l1.3-1.3-2.1-1.2-.8.7c-1.2-.5-2-1.3-2.5-2.5l.7-.8-1.2-2.1Z"/>
+            </svg>
+            WhatsApp
+          </a>
+          <a class="button button-secondary" href="https://www.instagram.com/emmamspa" target="_blank" rel="noopener" aria-label="Abrir Instagram de Emma Spa">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M17.5 6.5h.01"/>
+            </svg>
+            Instagram
+          </a>
+          <a class="button button-secondary" href="https://www.facebook.com/EmmaMSpa/" target="_blank" rel="noopener" aria-label="Abrir Facebook de Emma Spa">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3Z"/>
+            </svg>
+            Facebook
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand-mark" href="#inicio" aria-label="Emma Spa">
+      <img class="brand-logo" src="assets/emma-logo-horizontal.png" alt="Emma Spa">
+    </a>
+    <small>Relájate · Renueva · Renace</small>
+  </footer>
+  <a class="appointment-bar" href="#contacto" aria-label="Haz tu cita">
+    <div class="appointment-copy">
+      <strong>Haz tu cita</strong>
+      <span>Agenda por el canal que prefieras.</span>
+    </div>
+    <span class="appointment-action" aria-hidden="true">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/>
+      </svg>
+      <span class="appointment-label-full">Haz tu cita</span>
+      <span class="appointment-label-short">Cita</span>
+    </span>
+  </a>
+  <script>
+    (() => {
+      const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+      const layers = Array.from(document.querySelectorAll(".parallax-layer"));
+
+      if (motionQuery.matches || layers.length === 0) {
+        return;
+      }
+
+      let ticking = false;
+
+      const updateParallax = () => {
+        const viewportCenter = window.innerHeight / 2;
+
+        layers.forEach((layer) => {
+          const rect = layer.getBoundingClientRect();
+          const speed = Number(layer.dataset.parallaxSpeed || 0);
+          const layerCenter = rect.top + rect.height / 2;
+          const offset = (layerCenter - viewportCenter) * speed;
+          layer.style.transform = `translate3d(0, ${offset.toFixed(2)}px, 0) scale(1.04)`;
+        });
+
+        ticking = false;
+      };
+
+      const requestUpdate = () => {
+        if (!ticking) {
+          window.requestAnimationFrame(updateParallax);
+          ticking = true;
+        }
+      };
+
+      window.addEventListener("scroll", requestUpdate, { passive: true });
+      window.addEventListener("resize", requestUpdate);
+      updateParallax();
+    })();
+  </script>
+</body>
+</html>
