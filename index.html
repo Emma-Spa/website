@@ -1002,6 +1002,28 @@
       letter-spacing: 2px;
     }
 
+    .trust-item.stars-block {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+
+    .trust-stars {
+      color: var(--rosa);
+      font-size: 16px;
+      letter-spacing: 2px;
+    }
+
+    .trust-gmaps {
+      color: var(--grafito);
+      font-family: "Montserrat", Arial, sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      opacity: 0.7;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
     .trust-sep {
       color: var(--arena);
       font-size: 18px;
@@ -1332,9 +1354,12 @@
         <h1 id="hero-title">Este momento es tuyo.</h1>
         <p>¿Cuándo fue la última vez que te diste tiempo para ti? En Emma Spa ese espacio existe — cálido, sin prisa y pensado para que salgas sintiéndote tú misma.</p>
         <div class="trust-row" aria-label="Indicadores de confianza">
-          <span class="trust-item stars">★★★★★</span>
+          <span class="trust-item stars-block">
+            <span class="trust-stars">★★★★★</span>
+            <span class="trust-gmaps">en Google Maps</span>
+          </span>
           <span class="trust-sep">·</span>
-          <span class="trust-item">+500 clientas</span>
+          <span class="trust-item">30 años de experiencia</span>
         </div>
         <div class="hero-actions" aria-label="Acciones principales">
           <a class="button button-primary" href="https://wa.me/528116107171?text=Hola%2C%20quiero%20agendar%20mi%20cita%20en%20Emma%20Spa%20%F0%9F%8C%B8" target="_blank" rel="noopener">
