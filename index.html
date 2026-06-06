@@ -1132,8 +1132,144 @@
       font-weight: 400;
     }
 
+    /* ── Gift card section ── */
+    .regalo {
+      background: var(--oscuro);
+      overflow: hidden;
+      padding: clamp(72px, 10vw, 124px) clamp(24px, 6vw, 80px);
+      position: relative;
+    }
+
+    .regalo-inner {
+      align-items: center;
+      display: grid;
+      gap: clamp(48px, 7vw, 96px);
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      margin: 0 auto;
+      max-width: 1120px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .regalo-copy {
+      display: grid;
+      gap: 24px;
+    }
+
+    .regalo-copy h2 {
+      color: var(--beige);
+    }
+
+    .regalo-copy p {
+      color: rgba(247, 239, 230, 0.78);
+      font-size: 18px;
+    }
+
+    .regalo-occasions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .regalo-tag {
+      background: rgba(247, 239, 230, 0.1);
+      border: 1px solid rgba(247, 239, 230, 0.22);
+      color: rgba(247, 239, 230, 0.7);
+      font-family: "Montserrat", Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      padding: 5px 12px;
+      text-transform: uppercase;
+    }
+
+    .regalo-card {
+      background: var(--blanco);
+      border: 1px solid var(--arena);
+      box-shadow: 0 32px 80px rgba(44, 26, 29, 0.28);
+      display: grid;
+      gap: 0;
+      overflow: hidden;
+    }
+
+    .regalo-card-top {
+      background: linear-gradient(135deg, var(--rosa) 0%, #c96b82 100%);
+      padding: clamp(28px, 4vw, 44px);
+      display: grid;
+      gap: 10px;
+    }
+
+    .regalo-card-top .card-label {
+      color: rgba(253, 250, 247, 0.72);
+      font-family: "Montserrat", Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .regalo-card-top .card-brand {
+      color: var(--blanco);
+      font-family: "Montserrat", Arial, sans-serif;
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 300;
+      line-height: 1.2;
+    }
+
+    .regalo-card-top .card-tagline {
+      color: rgba(253, 250, 247, 0.8);
+      font-size: 13px;
+      margin-top: 6px;
+    }
+
+    .regalo-card-bottom {
+      padding: clamp(20px, 3vw, 32px);
+      display: grid;
+      gap: 16px;
+    }
+
+    .regalo-card-bottom p {
+      color: var(--grafito);
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .regalo-card-bottom .card-cta {
+      align-items: center;
+      background: var(--oscuro);
+      color: var(--blanco);
+      display: inline-flex;
+      font-family: "Montserrat", Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      gap: 8px;
+      justify-content: center;
+      min-height: 44px;
+      padding: 11px 20px;
+      text-transform: uppercase;
+      transition: background 180ms ease;
+      width: 100%;
+    }
+
+    .regalo-card-bottom .card-cta:hover {
+      background: var(--rosa);
+    }
+
+    .regalo-deco {
+      height: 320px;
+      inset: -40px -60px auto auto;
+      opacity: 0.04;
+      position: absolute;
+      width: 320px;
+      z-index: 0;
+    }
+
     @media (max-width: 880px) {
       .testimonios-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .regalo-inner {
         grid-template-columns: 1fr;
       }
     }
@@ -1147,6 +1283,7 @@
     <nav class="nav-links" aria-label="Secciones">
       <a href="#experiencia">Experiencia</a>
       <a href="#servicios">Servicios</a>
+      <a href="#regalo">Regalos</a>
       <a href="#ubicacion">Ubicación</a>
       <a href="#contacto">Contacto</a>
       <a class="nav-cta" href="https://wa.me/528116107171?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita%20en%20Emma%20Spa." target="_blank" rel="noopener" aria-label="Agenda tu cita por WhatsApp">
@@ -1162,9 +1299,14 @@
   <main id="inicio">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <span class="eyebrow">Mereces esto · Llevas mucho tiempo esperando</span>
-        <h1 id="hero-title">¿Cuándo fue la última vez que te diste tiempo para ti?</h1>
-        <p>En Emma Spa, ese momento existe. 30 años cuidando mujeres como tú, un servicio a la vez.</p>
+        <span class="eyebrow">Emma Spa · 30 años de experiencia</span>
+        <h1 id="hero-title">Este momento es tuyo.</h1>
+        <p>¿Cuándo fue la última vez que te diste tiempo para ti? En Emma Spa ese espacio existe — cálido, sin prisa y pensado para que salgas sintiéndote tú misma.</p>
+        <div class="trust-row" aria-label="Indicadores de confianza">
+          <span class="trust-item stars">★★★★★</span>
+          <span class="trust-sep">·</span>
+          <span class="trust-item">+500 clientas</span>
+        </div>
         <div class="hero-actions" aria-label="Acciones principales">
           <a class="button button-primary" href="https://wa.me/528116107171?text=Hola%2C%20quiero%20agendar%20mi%20cita%20en%20Emma%20Spa%20%F0%9F%8C%B8" target="_blank" rel="noopener">
             <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -1178,13 +1320,6 @@
             </svg>
             Ver servicios
           </a>
-        </div>
-        <div class="trust-row" aria-label="Indicadores de confianza">
-          <span class="trust-item stars">★★★★★</span>
-          <span class="trust-sep">·</span>
-          <span class="trust-item">+500 clientas</span>
-          <span class="trust-sep">·</span>
-          <span class="trust-item">30 años de experiencia</span>
         </div>
       </div>
       <div class="hero-visual" aria-hidden="true">
@@ -1203,26 +1338,26 @@
         <div class="testimonios-grid">
           <div class="testimonio-card">
             <div class="testimonio-stars">★★★★★</div>
-            <p class="testimonio-quote">"Salí sintiéndome nueva. Llevaba meses sin descansar de verdad. Ya agendé mi próxima cita antes de salir."</p>
+            <p class="testimonio-quote">"Un lugar que desde que entras te hace sentir relajada antes de comenzar la sesión. Ambientación, luces, aromas... y ni que decir del trato tan profesional de su anfitriona. 💯 Recomendable!!"</p>
             <div class="testimonio-author">
-              <strong>Laura M.</strong>
-              <span>Servicio Renace</span>
+              <strong>Nereida Tristán</strong>
+              <a href="https://www.google.com/maps?q=Emma+Spa&stick=H4sIAAAAAAAA_-NgU1I1qLAwMzNKNkxKNjI1NrE0Sja2MqhIM0k1S7NMSjQ2S7Y0ME5LW8TK4Zqbm6gQXJAIAGDZkBY0AAAA" target="_blank" rel="noopener" style="color: var(--rosa); font-size: 13px; text-decoration: none;">Ver en Google Maps ↗</a>
             </div>
           </div>
           <div class="testimonio-card">
             <div class="testimonio-stars">★★★★★</div>
-            <p class="testimonio-quote">"El ambiente es increíble y la atención es de otro nivel. Ya es mi ritual mensual obligatorio."</p>
+            <p class="testimonio-quote">"Una experiencia muy relajante con ganas de volver todos los días. La atención muy profesional, las instalaciones súper cómodas — desde que entras el lugar te da mucha paz. LO RECOMIENDO MUCHO."</p>
             <div class="testimonio-author">
-              <strong>Gabriela R.</strong>
-              <span>Servicio Renueva</span>
+              <strong>Lily Navarro</strong>
+              <a href="https://www.google.com/maps?q=Emma+Spa&stick=H4sIAAAAAAAA_-NgU1I1qLAwMzNKNkxKNjI1NrE0Sja2MqhIM0k1S7NMSjQ2S7Y0ME5LW8TK4Zqbm6gQXJAIAGDZkBY0AAAA" target="_blank" rel="noopener" style="color: var(--rosa); font-size: 13px; text-decoration: none;">Ver en Google Maps ↗</a>
             </div>
           </div>
           <div class="testimonio-card">
             <div class="testimonio-stars">★★★★★</div>
-            <p class="testimonio-quote">"Emma lleva años cuidándonos. No existe otro lugar igual en Guadalupe. Lo recomiendo a todas."</p>
+            <p class="testimonio-quote">"Excelente servicio y atención. Notas cambios desde la primera cita en el tratamiento de acné, y súper buenos sus masajes descontracturantes."</p>
             <div class="testimonio-author">
-              <strong>Patricia V.</strong>
-              <span>Clienta desde 2018</span>
+              <strong>Lesly Torres</strong>
+              <a href="https://www.google.com/maps?q=Emma+Spa&stick=H4sIAAAAAAAA_-NgU1I1qLAwMzNKNkxKNjI1NrE0Sja2MqhIM0k1S7NMSjQ2S7Y0ME5LW8TK4Zqbm6gQXJAIAGDZkBY0AAAA" target="_blank" rel="noopener" style="color: var(--rosa); font-size: 13px; text-decoration: none;">Ver en Google Maps ↗</a>
             </div>
           </div>
         </div>
@@ -1332,10 +1467,50 @@
         <span class="eyebrow">Este es tu espacio</span>
         <h2 id="quiet-title">Bienestar sin urgencia, atención sin exceso.</h2>
         <p>Una experiencia minimalista, cálida y cuidada para que tu visita se sienta natural desde el primer momento.</p>
-        <p>¿Tienes a alguien especial en mente? Regala una sesión en Emma Spa. El mejor regalo es el tiempo para una misma.</p>
-        <a class="button button-secondary" href="https://wa.me/528116107171?text=Hola%2C%20quiero%20regalar%20una%20sesi%C3%B3n%20en%20Emma%20Spa%20%F0%9F%8C%B8%20%C2%BFc%C3%B3mo%20funciona%3F" target="_blank" rel="noopener" style="margin-top:8px; border-color: rgba(247,239,230,0.45); color: var(--beige);">
-          Regalar una sesión &rarr;
-        </a>
+      </div>
+    </section>
+
+    <section class="regalo" id="regalo" aria-labelledby="regalo-title">
+      <svg class="regalo-deco" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+        <circle cx="100" cy="100" r="90" stroke="white" stroke-width="1.5"/>
+        <circle cx="100" cy="100" r="60" stroke="white" stroke-width="1"/>
+        <path d="M100 10 L100 190 M10 100 L190 100" stroke="white" stroke-width="0.8"/>
+      </svg>
+      <div class="regalo-inner">
+        <div class="regalo-copy">
+          <span class="eyebrow">Tarjeta de regalo</span>
+          <h2 id="regalo-title">El mejor regalo es el tiempo para una misma.</h2>
+          <p>Regala una experiencia en Emma Spa. Ella elige cuándo venir, tú le das el pretexto perfecto para descansar.</p>
+          <div class="regalo-occasions" aria-label="Ocasiones ideales">
+            <span class="regalo-tag">Cumpleaños</span>
+            <span class="regalo-tag">Día de las Madres</span>
+            <span class="regalo-tag">Aniversario</span>
+            <span class="regalo-tag">Amistad</span>
+            <span class="regalo-tag">Sin pretexto</span>
+          </div>
+          <a class="button button-primary" href="https://wa.me/528116107171?text=Hola%2C%20quiero%20regalar%20una%20sesi%C3%B3n%20en%20Emma%20Spa%20%F0%9F%8C%B8%20%C2%BFc%C3%B3mo%20funciona%3F" target="_blank" rel="noopener" style="margin-top: 8px; width: fit-content;">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/>
+            </svg>
+            Preguntar por WhatsApp
+          </a>
+        </div>
+        <div class="regalo-card" role="img" aria-label="Tarjeta de regalo Emma Spa">
+          <div class="regalo-card-top">
+            <span class="card-label">Tarjeta de regalo</span>
+            <div class="card-brand">Emma Spa</div>
+            <p class="card-tagline">Un momento para ti, con todo el cuidado que mereces.</p>
+          </div>
+          <div class="regalo-card-bottom">
+            <p>Válida para cualquier servicio. Sin fecha de vencimiento. Personalizable con un mensaje especial.</p>
+            <a class="card-cta" href="https://wa.me/528116107171?text=Hola%2C%20quiero%20regalar%20una%20sesi%C3%B3n%20en%20Emma%20Spa%20%F0%9F%8C%B8%20%C2%BFc%C3%B3mo%20funciona%3F" target="_blank" rel="noopener">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20.5 11.8a8.4 8.4 0 0 1-12.3 7.4L3 20.5l1.4-5a8.4 8.4 0 1 1 16.1-3.7Z"/>
+              </svg>
+              Solicitar tarjeta
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
